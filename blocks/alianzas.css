@@ -1,0 +1,44 @@
+.alianzas {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Un gris muy claro para diferenciar la sección */
+  color: #21426d;
+}
+
+.alianzas__title {
+  margin-bottom: 15px;
+  font-size: 40px;
+  color: #dbb60f;
+}
+
+.alianzas__subtitle {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 30px;
+}
+
+.alianzas__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Para que sea responsive en móviles */
+}
+
+.alianza__columna {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.alianza__logo {
+  height: 150px; /* Ajusta el tamaño */
+  margin-bottom: 15px;
+}
+
+.alianza-plus span {
+  font-size: 50px;
+  color: #21426d; /* Un color de acento */
+  font-weight: bold;
+}

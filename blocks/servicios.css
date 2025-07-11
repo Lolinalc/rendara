@@ -1,0 +1,43 @@
+.servicios {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Un gris muy claro para diferenciar la sección */
+  color: #21426d;
+}
+
+.servicios__title {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  color: #dbb60f;
+  text-shadow: 5px 5px 10px white;
+}
+
+.servicios__subtitle {
+  max-width: 800px;
+  padding-bottom: 25px;
+  font-size: 30px;
+  margin: auto;
+}
+
+.servicios__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  font-size: 30px;
+}
+
+.servicio__card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  border: 1px solid #eee;
+  width: 300px;
+}
+
+.servicio__card h4 {
+  text-align: center;
+}
