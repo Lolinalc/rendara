@@ -1,32 +1,76 @@
 header {
-  background: rgba(255, 255, 255);
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  padding: 10px 30px;
   width: 100%;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: padding 0.3s ease; /* Para futuras animaciones al hacer scroll */
 }
+
 .logo__image {
-  width: 250px;
+  width: 220px; /* Ligeramente más pequeño para balancear con el menú */
   height: auto;
+  transition: width 0.3s ease;
 }
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
-  font-size: 25px;
+  gap: 30px; /* Un poco más de aire */
+  font-size: 18px;
 }
 
 nav ul li a {
   color: #21426d;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600; /* Un poco más legible que 'bold' */
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #dbb60f;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #dbb60f;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+/* --- Estilos base del menú móvil (oculto en escritorio) --- */
+
+.hamburger-btn {
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10; /* Se asegura que esté por encima del nav */
+}
+
+.hamburger-line {
+  width: 30px;
+  height: 3px;
+  background-color: #21426d;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }

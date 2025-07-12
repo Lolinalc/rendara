@@ -16,33 +16,46 @@
   </head>
   <body>
     <div class="page">
-      <div class="header-intro">
-        <header>
-          <div class="logo">
+      <header class="header">
+        <div class="logo">
+          <a href="#intro">
             <img
               src="/images/RendaraTransparenteHorizontal.png"
               alt="Rendara Logo"
               class="logo__image"
             />
-          </div>
-          <nav>
-            <ul class="nav-links">
-              <li><a href="#intro">Inicio</a></li>
-              <li><a href="#servicios">Servicios</a></li>
-              <li><a href="#alianzas">Alianzas</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-            </ul>
-          </nav>
-        </header>
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="#intro">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#alianzas">Alianzas</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
 
-        <section id="intro" class="intro">
-          <h2 class="intro__title">Administración Integral de Propiedades</h2>
-          <p class="intro__description">
-            Somos Rendara, una empresa especializada en la administración
-            integral de propiedades en renta de largo plazo.
-          </p>
-        </section>
-      </div>
+        <!-- BOTÓN HAMBURGUESA: Solo visible en móvil -->
+        <button
+          class="hamburger-btn"
+          id="hamburger-btn"
+          aria-label="Abrir menú"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </header>
+
+      <section id="intro" class="intro">
+        <h2 class="intro__title">Administración Integral de Propiedades</h2>
+        <p class="intro__description">
+          Somos Rendara, una empresa especializada en la administración integral
+          de propiedades en renta de largo plazo.
+        </p>
+      </section>
+
       <section class="servicios" id="servicios">
         <h2 class="servicios__title">Servicios</h2>
         <p class="servicios__subtitle">
@@ -79,7 +92,7 @@
       </section>
 
       <section class="alianzas" id="alianzas">
-        <h2 class="alianzas__title">Alianza Estratégica</h2>
+        <h2 class="alianzas__title">Alianzas Estratégica</h2>
         <p class="alianzas__subtitle">
           Nos enfocamos 100% en la administración. Para la comercialización, nos
           aliamos con los mejores.
@@ -91,11 +104,13 @@
               alt="Rendara Logo"
               class="alianza__logo"
             />
-            <h3>Nuestra Especialidad</h3>
-            <p>
-              Administración y cuidado integral de tu propiedad para maximizar
-              su valor y tu tranquilidad.
-            </p>
+            <div class="alianza__texto">
+              <h3>Nuestra Especialidad</h3>
+              <p>
+                Administración y cuidado integral de tu propiedad para maximizar
+                su valor y tu tranquilidad.
+              </p>
+            </div>
           </div>
 
           <div class="alianza-plus">
@@ -108,19 +123,126 @@
               alt="cyma logo"
               class="alianza__logo"
             />
-            <h3>Su Especialidad</h3>
-            <p>
-              Inmobiliarias confiables que se encargan de la promoción y
-              selección del mejor inquilino.
-            </p>
+            <div class="alianza__texto">
+              <h3>Tu empresa</h3>
+              <p>
+                Inmobiliarias confiables que se encargan de la promoción y
+                selección del mejor inquilino.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <h2 class="faq__title">Preguntas Frecuentes</h2>
+        <div class="faq__container">
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Cuál es el costo de su servicio y cómo se calcula la comisión?
+            </button>
+            <div class="faq__answer">
+              <p>
+                Nuestra comisión es del <strong>15% mensual</strong>. Es
+                importante destacar que esta se calcula únicamente sobre la
+                renta que es <strong>efectivamente recibida</strong>,
+                garantizando que solo pagas cuando generas ingresos.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Ustedes se encargan de encontrar a los inquilinos para mi
+              propiedad?
+            </button>
+            <div class="faq__answer">
+              <p>
+                Nosotros nos enfocamos 100% en la administración. Para encontrar
+                al mejor inquilino, nos aliamos con
+                <strong>inmobiliarias de confianza</strong> que se especializan
+                en la comercialización y selección de candidatos, asegurando un
+                proceso profesional de principio a fin.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Qué pasa si un mes el inquilino no paga? ¿Debo pagar la comisión?
+            </button>
+            <div class="faq__answer">
+              <p>
+                No. Nuestra comisión del 15% se calcula exclusivamente sobre la
+                renta que hayamos cobrado exitosamente. Si no hay ingreso de
+                renta en un mes,
+                <strong>no se genera ninguna comisión</strong> para nosotros. Tu
+                éxito es nuestro éxito.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Existe algún requisito o tipo de propiedad específico que
+              administren?
+            </button>
+            <div class="faq__answer">
+              <p>
+                Sí, actualmente administramos propiedades cuya renta mensual sea
+                de <strong>$15,000 pesos en adelante</strong>.
+                <strong>O bien, edificios o conjuto de departamentos</strong>.
+                Esto nos permite garantizar el nivel de servicio y dedicación
+                que cada propiedad merece.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Qué tareas específicas incluye la administración en el día a día?
+            </button>
+            <div class="faq__answer">
+              <p>
+                Nuestro servicio integral cubre todas las necesidades operativas
+                de tu propiedad:
+              </p>
+              <ul>
+                <li>Cobranza puntual y pago de servicios.</li>
+                <li>Gestión de personal (limpieza, mantenimiento, etc.).</li>
+                <li>Supervisión de trabajos y compra de insumos.</li>
+                <li>Manejo de trámites, contratos y renovaciones.</li>
+                <li>Resolución de imprevistos y reporte mensual detallado.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Cuál es la ventaja de contratarlos en vez de hacerlo yo mismo?
+            </button>
+            <div class="faq__answer">
+              <p>
+                Nuestra misión es que
+                <strong>tú no tengas que preocuparte por nada</strong>. Nos
+                encargamos de la operación diaria, los imprevistos y la
+                burocracia, liberando tu tiempo y asegurando que tu propiedad se
+                cuide como si fuera nuestra, generando ingresos estables y sin
+                complicaciones para ti.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <footer class="footer" id="contacto">
-        <h2 class="footer__title">Contacto</h2>
+        <h2 class="footer__title">Contáctanos</h2>
         <p class="footer__text">
-          Email: contacto@rendara.com | Teléfono: 9992-393-493
+          ¿Listo para dejar tu propiedad en manos expertas?
+        </p>
+        <p class="footer__text">
+          <a href="mailto:rendaramx@gmail.com">rendaramx@gmail.com</a> |
+          <a href="tel:+529992393493">+52 999 239 3493</a>
         </p>
       </footer>
     </div>

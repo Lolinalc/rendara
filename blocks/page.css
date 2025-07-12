@@ -1,7 +1,43 @@
+/* =================================
+   1. ESTILOS GLOBALES Y BASE
+   ================================= */
+
+/* Importamos una fuente limpia y moderna desde Google Fonts (opcional, pero recomendado) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif; /* Aplica la fuente a toda la página */
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+  color: #333; /* Color de texto por defecto para fondos claros */
+  background-color: #ffffff;
+}
+
 .page {
-  background-color: #21426d;
-  color: white;
-  margin: auto;
+  margin: 0 auto; /* Centrado horizontal */
   max-width: 1200px;
   position: relative;
+  overflow-x: hidden; /* Previene scroll horizontal indeseado */
+}
+
+/* Clases de utilidad para mantener la consistencia en los títulos */
+.section-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin: auto;
+  color: #dbb60f;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  max-width: 750px;
+  margin: 0;
+  color: #21426d; /* Tu color azul principal */
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Espaciado estándar para todas las secciones */
+.section-padding {
+  padding: 80px 30px;
 }

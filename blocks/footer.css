@@ -1,3 +1,44 @@
 .footer {
+  /* Usamos tu color azul corporativo como fondo para crear un fuerte contraste y señalar el final de la página. */
   background-color: #21426d;
+  color: #ffffff; /* Texto blanco para máxima legibilidad sobre el fondo azul. */
+  text-align: center;
+  padding: 50px 20px;
+
+  /* Este borde superior en color dorado crea una separación elegante y visualmente atractiva con la sección anterior. */
+  border-top: 4px solid #dbb60f;
+
+  /* Para asegurar que el footer se mantenga al final de la página. */
+  position: relative;
+  width: 100%;
+}
+
+.footer__title {
+  font-size: 32px;
+  color: #ffffff; /* Mantenemos el blanco para el título por claridad. */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer__text {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9; /* Le damos una ligera transparencia para que el título resalte más. */
+}
+
+/* --- MEJORA OPCIONAL: Hacer los enlaces interactivos --- */
+
+/* Estilo para los enlaces dentro del footer, si decides añadirlos. */
+.footer__text a {
+  color: #ffffff; /* Los enlaces mantienen el color del texto. */
+  text-decoration: none; /* Quitamos el subrayado por defecto. */
+  font-weight: 600;
+  transition: color 0.3s ease; /* Transición suave para el efecto hover. */
+}
+
+/* Al pasar el mouse sobre el enlace, cambia al color dorado para un feedback visual. */
+.footer__text a:hover {
+  color: #dbb60f;
+  text-decoration: underline; /* Aparece un subrayado al interactuar. */
 }
