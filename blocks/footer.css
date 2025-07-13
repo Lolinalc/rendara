@@ -1,16 +1,10 @@
 .footer {
-  /* Usamos tu color azul corporativo como fondo para crear un fuerte contraste y señalar el final de la página. */
   background-color: #21426d;
-  color: #ffffff; /* Texto blanco para máxima legibilidad sobre el fondo azul. */
+  color: #ffffff;
   text-align: center;
   padding: 50px 20px;
-
-  /* Este borde superior en color dorado crea una separación elegante y visualmente atractiva con la sección anterior. */
   border-top: 4px solid #dbb60f;
-
-  /* Para asegurar que el footer se mantenga al final de la página. */
   position: relative;
-  width: 100%;
 }
 
 .footer__title {

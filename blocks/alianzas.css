@@ -1,49 +1,75 @@
 /* =================================
-   5. SECCIÓN ALIANZAS
+   5. SECCIÓN ALIANZAS (DISEÑO 2 PASOS)
    ================================= */
 .alianzas {
   background-color: #ffffff;
-  text-align: center;
-  padding: 40px 20px;
 }
 
-.alianzas__container {
+.alianza-proceso-container {
+  display: flex;
+  flex-direction: column; /* Apilado por defecto para móvil */
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.proceso-etapa {
+  flex: 1;
+  max-width: 450px;
+  padding: 30px;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fcfcfc;
+}
+
+.proceso-etapa h3 {
+  font-size: 24px;
+  color: #21426d;
+  margin-bottom: 15px;
+}
+
+.proceso-etapa p {
+  margin: 0 0 25px 0;
+  font-size: 17px;
+  min-height: 50px; /* Para alinear verticalmente el contenido */
+}
+
+.partner-logos {
   display: flex;
   justify-content: center;
-  align-items: center; /* Alineación vertical perfecta */
-  gap: 20px;
-  margin-top: 50px;
-  flex-wrap: wrap;
-}
-
-.alianza__columna {
-  flex: 1;
-  max-width: 420px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column; /* Alineamos contenido de la columna */
   align-items: center;
+  gap: 30px;
+  min-height: 60px;
 }
 
-.alianza__logo {
-  height: 120px; /* Tamaño más balanceado */
-  margin-bottom: 25px;
+.partner-logo {
+  height: 50px;
+  max-width: 160px;
+  opacity: 0.9;
 }
 
-.alianza__texto h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #21426d;
+.rendara-logo-final {
+  height: 65px; /* Hacemos el logo de Rendara más prominente */
 }
 
-.alianza__texto p {
-  font-size: 18px; /* Consistente con el resto del cuerpo de texto */
-  margin: 0;
-  max-width: 350px;
+.proceso-conector {
+  font-size: 40px;
+  color: #dbb60f;
+  font-weight: bold;
+  transform: rotate(90deg); /* Flecha hacia abajo en móvil */
+  margin: -10px 0;
 }
 
-.alianza-plus span {
-  font-size: 60px;
-  color: #dbb60f; /* Usamos el dorado para el 'plus' para que destaque más */
-  font-weight: 300; /* Una fuente más ligera para el símbolo */
+/* --- AJUSTES PARA ESCRITORIO --- */
+@media (min-width: 768px) {
+  .alianza-proceso-container {
+    flex-direction: row; /* Columnas lado a lado en escritorio */
+    align-items: stretch; /* Las columnas tienen la misma altura */
+  }
+
+  .proceso-conector {
+    transform: rotate(0deg); /* Flecha horizontal en escritorio */
+    align-self: center; /* Centra la flecha verticalmente */
+  }
 }
