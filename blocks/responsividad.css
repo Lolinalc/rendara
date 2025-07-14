@@ -82,6 +82,10 @@
   .section-subtitle {
     font-size: 18px;
   }
+  .intro {
+    /* Le decimos al navegador móvil que use el comportamiento por defecto: la imagen se desplaza con el contenido. */
+    background-attachment: scroll;
+  }
 
   .intro__title {
     font-size: 36px;
