@@ -254,14 +254,16 @@
           </p>
 
           <!-- FORMULARIO DE CONTACTO COMPLETO -->
+          <!-- REEMPLAZA TU FORMULARIO CON ESTA VERSIÓN FINAL Y COMPLETA -->
+
           <form
             name="contacto"
             method="POST"
+            action="/gracias.html"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             class="contact-form"
           >
-            <!-- Campo trampa anti-spam (oculto para humanos) -->
             <p class="hidden-field" style="display: none">
               <label>
                 No llenes esto si eres humano: <input name="bot-field" />
@@ -270,6 +272,7 @@
 
             <!-- Grupo de campos del formulario -->
             <div class="form-group">
+              <!-- 5. El atributo 'name' en CADA campo es obligatorio -->
               <input
                 type="text"
                 name="nombre"
