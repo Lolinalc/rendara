@@ -3,7 +3,7 @@
       rgba(33, 66, 109, 0.8),
       rgba(33, 66, 109, 0.8)
     ),
-    url("../images/administracion-propiedades.jpg");
+    url("../images/administracióndepropiedades.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Efecto Parallax: la imagen se queda fija al hacer scroll */

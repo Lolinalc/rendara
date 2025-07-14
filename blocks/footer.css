@@ -6,33 +6,87 @@
   border-top: 4px solid #dbb60f;
   position: relative;
 }
+.footer-container {
+  max-width: 700px; /* Limita el ancho del contenido del footer para mejor legibilidad */
+  margin: 0 auto;
+}
 
-.footer__title {
-  font-size: 32px;
-  color: #ffffff; /* Mantenemos el blanco para el título por claridad. */
+.contact-form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form-group {
   margin-bottom: 20px;
-  font-weight: 700;
 }
 
-.footer__text {
+.form-input {
+  /* Estilo base para todos los campos */
+  width: 100%;
+  padding: 15px;
+  font-family: "Poppins", sans-serif; /* Mantiene la fuente de la página */
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #21426d;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* Evita que el padding rompa el diseño */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cambia el color del texto del placeholder */
+.form-input::placeholder {
+  color: #888888;
+}
+
+/* Efecto visual cuando el usuario hace clic en un campo */
+.form-input:focus {
+  outline: none; /* Quitamos el borde por defecto del navegador */
+  border-color: #dbb60f; /* Borde dorado al enfocar */
+  box-shadow: 0 0 10px rgba(219, 182, 15, 0.3); /* Sombra dorada suave */
+}
+
+/* Estilo específico para el área de texto */
+textarea.form-input {
+  resize: vertical; /* Permite al usuario ajustar la altura, pero no el ancho */
+  min-height: 120px;
+}
+
+.form-button {
+  display: inline-block;
+  width: 100%; /* Ocupa todo el ancho para un look moderno */
+  padding: 15px 30px;
+  background-color: #dbb60f; /* Color dorado de acento */
+  color: #21426d; /* Texto azul oscuro para contraste */
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
-  margin: 0;
-  line-height: 1.6;
-  opacity: 0.9; /* Le damos una ligera transparencia para que el título resalte más. */
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* --- MEJORA OPCIONAL: Hacer los enlaces interactivos --- */
+.form-button:hover {
+  background-color: #c9a40e; /* Un dorado un poco más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Pequeño efecto de levantamiento */
+}
 
-/* Estilo para los enlaces dentro del footer, si decides añadirlos. */
-.footer__text a {
-  color: #ffffff; /* Los enlaces mantienen el color del texto. */
-  text-decoration: none; /* Quitamos el subrayado por defecto. */
+.footer__contact-info {
+  margin-top: 25px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.footer__contact-info a {
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease; /* Transición suave para el efecto hover. */
+  transition: color 0.3s ease;
 }
 
-/* Al pasar el mouse sobre el enlace, cambia al color dorado para un feedback visual. */
-.footer__text a:hover {
+.footer__contact-info a:hover {
   color: #dbb60f;
-  text-decoration: underline; /* Aparece un subrayado al interactuar. */
+  text-decoration: underline;
 }
