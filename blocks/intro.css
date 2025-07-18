@@ -6,7 +6,7 @@
     url("../images/administracionrendara.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Efecto Parallax: la imagen se queda fija al hacer scroll */
+  background-attachment: fixed;
   color: white;
   text-align: center;
   min-height: 40vh;
@@ -18,15 +18,15 @@
 }
 
 .intro__title {
-  font-size: 48px; /* Más grande para ser el titular principal */
+  font-size: 48px;
   font-weight: 700;
   color: #dbb60f;
   margin-bottom: 20px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra más sutil */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .intro__description {
-  font-size: 22px; /* Tamaño más legible para un subtítulo */
+  font-size: 22px;
   max-width: 750px;
   margin: 0;
   font-weight: 400;

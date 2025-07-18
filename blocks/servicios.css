@@ -1,19 +1,13 @@
 .servicios {
   background-color: #f9f9f9;
   text-align: center;
-
   padding: 40px 20px;
 }
 
-/* Los títulos y subtítulos ya están definidos en las clases globales .section-title y .section-subtitle */
-
 .servicios__cards {
-  display: grid; /* Grid es mucho mejor para galerías de tarjetas */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Responsivo por naturaleza */
-  gap: 30px; /* Espacio uniforme entre tarjetas */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .servicio__card {
@@ -21,13 +15,13 @@
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #e9e9e9;
-  text-align: center; /* Centramos todo el contenido de la tarjeta */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para ambos efectos */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .servicio__card:hover {
-  transform: translateY(-10px); /* Un efecto de "levantamiento" más moderno */
-  box-shadow: 0 10px 25px rgba(219, 182, 15, 0.2); /* Sombra dorada más suave */
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(219, 182, 15, 0.2);
 }
 
 .servicio__card h4 {
@@ -40,8 +34,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 16px; /* Tamaño adecuado para items de lista */
-  text-align: left; /* Alineamos la lista a la izquierda para fácil lectura */
+  font-size: 16px;
+  text-align: left;
 }
 
 .servicio__card ul li {
@@ -51,7 +45,7 @@
 }
 
 .servicio__card ul li::before {
-  content: "✔"; /* Un checkmark para un look más profesional */
+  content: "✔";
   color: #dbb60f;
   position: absolute;
   left: 0;

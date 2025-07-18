@@ -6,40 +6,35 @@
 }
 
 .faq__title {
-  margin-bottom: 40px; /* Un poco más de espacio */
+  margin-bottom: 40px;
   font-size: 40px;
-  color: #dbb60f; /* Mismo color dorado que en 'alianzas' */
+  color: #dbb60f;
 }
 
 .faq__container {
-  max-width: 800px; /* Mantenemos un ancho legible */
+  max-width: 800px;
   margin: 0 auto;
   text-align: left;
 }
 
 .faq__item {
-  border-bottom: 1px solid #e0e0e0; /* Separador sutil */
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .faq__item:last-child {
-  border-bottom: none; /* Quitamos el borde del último elemento */
+  border-bottom: none;
 }
 
 .faq__question {
-  /* Reseteamos el estilo de botón para que parezca texto */
   background: none;
   border: none;
   width: 100%;
   text-align: left;
   padding: 20px 0;
-
-  /* Estilos de fuente consistentes */
   font-size: 20px;
   font-weight: 700;
   color: #21426d;
   cursor: pointer;
-
-  /* Para el ícono '+' */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,27 +48,23 @@
   transition: transform 0.2s ease-in-out;
 }
 
-/* Estilo cuando el acordeón está activo */
 .faq__question.active::after {
   transform: rotate(45deg);
 }
 
 .faq__answer {
-  /* La magia para la animación del acordeón */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-
-  color: #333; /* Un gris oscuro para mejor lectura del párrafo */
+  color: #333;
   line-height: 1.7;
-  padding-right: 20px; /* Espacio para que el texto no choque con el borde */
+  padding-right: 20px;
 }
 
 .faq__answer p {
   padding-bottom: 20px;
 }
 
-/* Estilos para la lista dentro de la respuesta */
 .faq__answer ul {
   padding-bottom: 20px;
   padding-left: 20px;

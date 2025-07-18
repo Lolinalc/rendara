@@ -1,13 +1,10 @@
-/* =================================
-   5. SECCIÓN ALIANZAS (DISEÑO 2 PASOS)
-   ================================= */
 .alianzas {
   background-color: #ffffff;
 }
 
 .alianza-proceso-container {
   display: flex;
-  flex-direction: column; /* Apilado por defecto para móvil */
+  flex-direction: column;
   align-items: center;
   gap: 30px;
   margin-top: 50px;
@@ -32,7 +29,7 @@
 .proceso-etapa p {
   margin: 0 0 25px 0;
   font-size: 17px;
-  min-height: 50px; /* Para alinear verticalmente el contenido */
+  min-height: 50px;
 }
 
 .partner-logos {
@@ -50,26 +47,25 @@
 }
 
 .rendara-logo-final {
-  height: 65px; /* Hacemos el logo de Rendara más prominente */
+  height: 65px;
 }
 
 .proceso-conector {
   font-size: 40px;
   color: #dbb60f;
   font-weight: bold;
-  transform: rotate(90deg); /* Flecha hacia abajo en móvil */
+  transform: rotate(90deg);
   margin: -10px 0;
 }
 
-/* --- AJUSTES PARA ESCRITORIO --- */
 @media (min-width: 768px) {
   .alianza-proceso-container {
-    flex-direction: row; /* Columnas lado a lado en escritorio */
-    align-items: stretch; /* Las columnas tienen la misma altura */
+    flex-direction: row;
+    align-items: stretch;
   }
 
   .proceso-conector {
-    transform: rotate(0deg); /* Flecha horizontal en escritorio */
-    align-self: center; /* Centra la flecha verticalmente */
+    transform: rotate(0deg);
+    align-self: center;
   }
 }

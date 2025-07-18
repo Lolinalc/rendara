@@ -7,7 +7,7 @@
   position: relative;
 }
 .footer-container {
-  max-width: 700px; /* Limita el ancho del contenido del footer para mejor legibilidad */
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -21,43 +21,39 @@
 }
 
 .form-input {
-  /* Estilo base para todos los campos */
   width: 100%;
   padding: 15px;
-  font-family: "Poppins", sans-serif; /* Mantiene la fuente de la página */
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   background-color: #ffffff;
   color: #21426d;
   border: 1px solid #dddddd;
   border-radius: 8px;
-  box-sizing: border-box; /* Evita que el padding rompa el diseño */
+  box-sizing: border-box;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Cambia el color del texto del placeholder */
 .form-input::placeholder {
   color: #888888;
 }
 
-/* Efecto visual cuando el usuario hace clic en un campo */
 .form-input:focus {
-  outline: none; /* Quitamos el borde por defecto del navegador */
-  border-color: #dbb60f; /* Borde dorado al enfocar */
-  box-shadow: 0 0 10px rgba(219, 182, 15, 0.3); /* Sombra dorada suave */
+  outline: none;
+  border-color: #dbb60f;
+  box-shadow: 0 0 10px rgba(219, 182, 15, 0.3);
 }
 
-/* Estilo específico para el área de texto */
 textarea.form-input {
-  resize: vertical; /* Permite al usuario ajustar la altura, pero no el ancho */
+  resize: vertical;
   min-height: 120px;
 }
 
 .form-button {
   display: inline-block;
-  width: 100%; /* Ocupa todo el ancho para un look moderno */
+  width: 100%;
   padding: 15px 30px;
-  background-color: #dbb60f; /* Color dorado de acento */
-  color: #21426d; /* Texto azul oscuro para contraste */
+  background-color: #dbb60f;
+  color: #21426d;
   border: none;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
@@ -69,8 +65,8 @@ textarea.form-input {
 }
 
 .form-button:hover {
-  background-color: #c9a40e; /* Un dorado un poco más oscuro al pasar el mouse */
-  transform: translateY(-2px); /* Pequeño efecto de levantamiento */
+  background-color: #c9a40e;
+  transform: translateY(-2px);
 }
 
 .footer__contact-info {

@@ -1,23 +1,14 @@
-/* =================================
-   8. RESPONSIVIDAD Y MENÚ MÓVIL (CORREGIDO)
-   ================================= */
-
-/* --- BREAKPOINT PRINCIPAL PARA TABLET Y MÓVIL --- */
 @media (max-width: 768px) {
-  /* <-- AQUÍ SE AÑADIÓ LA LLAVE DE APERTURA { */
-
-  /* 1. Ajustes del Header y aparición del botón hamburguesa */
   header {
     padding: 15px 20px;
   }
 
   .hamburger-btn {
-    display: flex; /* Se muestra el botón en móvil */
+    display: flex;
   }
 
-  /* 2. Estilos del panel de navegación móvil */
   .nav {
-    position: fixed; /* 'fixed' es mejor para que no se mueva con el scroll de la página */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -31,31 +22,26 @@
     transition: transform 0.4s ease-in-out;
   }
 
-  /* Hacemos que la lista ocupe el nav, no solo el ul */
   .nav-links {
     flex-direction: column;
     gap: 40px;
     text-align: center;
-    padding: 0; /* Reseteamos el padding por si acaso */
+    padding: 0;
   }
 
   .nav-links a {
-    /* Aplicamos el estilo al enlace directamente */
     font-size: 28px;
     font-weight: 700;
   }
 
-  /* En lugar de redefinir toda la regla, solo ocultamos el ::after */
   nav ul li a::after {
     display: none;
   }
 
-  /* 3. El estado "abierto" del menú */
   .header.nav-open .nav {
     transform: translateX(0);
   }
 
-  /* 4. Animación del botón hamburguesa a una "X" */
   .header.nav-open .hamburger-line:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
@@ -69,12 +55,10 @@
     background-color: #21426d;
   }
 
-  /* 5. Ajustes generales de la página (REGLAS CONSOLIDADAS) */
   .section-padding {
     padding: 60px 20px;
   }
 
-  /* Ahora solo cambiamos el font-size, el resto de estilos se hereda */
   .section-title {
     font-size: 32px;
   }
@@ -83,7 +67,6 @@
     font-size: 18px;
   }
   .intro {
-    /* Le decimos al navegador móvil que use el comportamiento por defecto: la imagen se desplaza con el contenido. */
     background-attachment: scroll;
   }
 
@@ -95,17 +78,11 @@
     font-size: 20px;
   }
 
-  /* Hacemos que las tarjetas de servicio se apilen */
   .servicios__cards {
     grid-template-columns: 1fr;
   }
-} /* <-- AQUÍ SE AÑADIÓ LA LLAVE DE CIERRE } PARA LA MEDIA QUERY */
+}
 
-/* =================================
-   9. FIX PARA ANCLAS DE NAVEGACIÓN
-   ================================= */
-
-/* Esto previene que el header fijo tape los títulos al hacer clic en el menú */
 [id] {
   scroll-margin-top: 100px;
 }
