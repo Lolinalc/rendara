@@ -82,10 +82,13 @@
   display: block;
   width: 22px;
   height: 1.5px;
-  background: var(--navy);
+  background: #ffffff;
   transition:
     transform 0.3s var(--ease),
     opacity 0.3s;
+}
+.nav.scrolled .nav__hamburger span {
+  background: var(--navy);
 }
 .nav__hamburger.open span:nth-child(1) {
   transform: translateY(6.5px) rotate(45deg);
