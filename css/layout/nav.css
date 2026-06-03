@@ -36,7 +36,7 @@
 .nav__links a {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--white-60);
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.02em;
   transition: color 0.2s;
   position: relative;
@@ -52,10 +52,16 @@
   transition: width 0.3s var(--ease);
 }
 .nav__links a:hover {
-  color: var(--white);
+  color: #ffffff;
 }
 .nav__links a:hover::after {
   width: 100%;
+}
+.nav.scrolled .nav__links a {
+  color: var(--white-60);
+}
+.nav.scrolled .nav__links a:hover {
+  color: var(--white);
 }
 .nav__cta {
   display: flex;
