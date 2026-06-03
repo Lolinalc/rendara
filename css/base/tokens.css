@@ -1,0 +1,17 @@
+:root {
+  --navy: #1e3269;
+  --navy-mid: #eef1f8;
+  --navy-card: #ffffff;
+  --gold: #e8a820;
+  --gold-light: #f5c040;
+  --gold-dim: rgba(232, 168, 32, 0.12);
+  --white: #1e3269;
+  --white-60: #4a5a7a;
+  --white-30: rgba(30, 50, 105, 0.08);
+  --border: rgba(30, 50, 105, 0.13);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
