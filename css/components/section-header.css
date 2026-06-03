@@ -1,0 +1,14 @@
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--white-60);
+  max-width: 540px;
+  line-height: 1.7;
+}
