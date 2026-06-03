@@ -1,0 +1,64 @@
+@media (max-width: 1024px) {
+  .about__inner,
+  .beneficios__inner,
+  .faq__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about__image-badge {
+    right: 1rem;
+  }
+  .servicios__header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .servicios__grid {
+    grid-template-columns: 1fr;
+  }
+  .proceso__steps {
+    grid-template-columns: 1fr;
+  }
+  .proceso-arrow {
+    transform: rotate(90deg);
+    padding: 1.5rem 0;
+  }
+  .faq__left {
+    position: static;
+  }
+  .hero__stats-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__links,
+  .nav__cta .btn-primary {
+    display: none;
+  }
+  .nav__hamburger {
+    display: flex;
+  }
+  .hero__title {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+  .about__features {
+    grid-template-columns: 1fr;
+  }
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
