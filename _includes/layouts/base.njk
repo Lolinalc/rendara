@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ seoTitle or title }} | Rendara</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="canonical" href="https://rendaramx.com{{ page.url }}" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="{{ ogType or 'website' }}" />
+    <meta property="og:url" content="https://rendaramx.com{{ page.url }}" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="https://rendaramx.com/images/og-rendara.jpg" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:site_name" content="Rendara" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {% block schema %}{% endblock %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body class="page-light">
+{% include "partials/nav.njk" %}
+    <main>
+{% block content %}{{ content | safe }}{% endblock %}
+    </main>
+
+{% include "partials/footer.njk" %}
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

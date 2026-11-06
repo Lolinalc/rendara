@@ -1,0 +1,98 @@
+/* ══ Blog ══ */
+/* Páginas sin hero oscuro: barra blanca y logo a color siempre */
+.page-light .nav {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 0 var(--border);
+}
+.page-light .nav__links a { color: var(--white-60); }
+.page-light .nav__links a:hover { color: var(--white); }
+.page-light .nav__hamburger span { background: var(--navy); }
+.page-light .nav__logo-img--light { display: none; }
+.page-light .nav__logo-img--color { display: block; }
+
+.post__container { max-width: 760px; }
+.post__header {
+  padding: 9rem 0 3rem;
+  background: var(--navy-mid);
+  border-bottom: 1px solid var(--border);
+}
+.post__breadcrumb { font-size: 0.8rem; color: var(--white-60); margin-bottom: 1.5rem; }
+.post__breadcrumb a:hover { color: var(--gold); }
+.post__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+.post__lead { font-size: 1.1rem; color: var(--white-60); line-height: 1.7; }
+.post__meta { margin-top: 1.25rem; font-size: 0.8rem; color: var(--white-60); }
+
+.post__body { padding: 3rem 0 1rem; font-size: 1.05rem; line-height: 1.8; color: #2b3754; }
+.post__body > * + * { margin-top: 1.25rem; }
+.post__body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  line-height: 1.25;
+  color: var(--navy);
+  margin-top: 2.75rem;
+}
+.post__body h3 { font-size: 1.15rem; color: var(--navy); margin-top: 2rem; }
+.post__body ul, .post__body ol { padding-left: 1.4rem; }
+.post__body ul { list-style: disc; }
+.post__body ol { list-style: decimal; }
+.post__body li + li { margin-top: 0.4rem; }
+.post__body li::marker { color: var(--gold); }
+.post__body a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.post__body a:hover { color: var(--gold); }
+.post__body blockquote {
+  border-left: 3px solid var(--gold);
+  background: var(--gold-dim);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.post__body table { width: 100%; border-collapse: collapse; font-size: 0.95rem; display: block; overflow-x: auto; }
+.post__body th, .post__body td { text-align: left; padding: 0.7rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.post__body th { background: var(--navy); color: #fff; font-weight: 600; }
+.post__body tr:nth-child(even) td { background: var(--navy-mid); }
+
+.post__cta {
+  margin: 3rem 0;
+  padding: 2.5rem;
+  background: var(--navy);
+  border-radius: var(--radius);
+  color: rgba(255, 255, 255, 0.8);
+}
+.post__cta-title { font-family: var(--font-serif); font-size: 1.75rem; color: #fff; margin-bottom: 0.75rem; }
+.post__cta p { margin-bottom: 1.25rem; line-height: 1.7; }
+.post__cta .text-fine { margin: 1rem 0 0; color: rgba(255, 255, 255, 0.55); }
+
+.post__related { padding-bottom: 5rem; }
+.post__related-title { font-family: var(--font-serif); font-size: 1.4rem; color: var(--navy); margin-bottom: 1rem; }
+
+.blog-list { padding-top: 3rem; padding-bottom: 6rem; }
+.post-list { display: grid; gap: 1rem; }
+.post-card a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.75rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s var(--ease);
+}
+.post-card a:hover { border-color: var(--gold); box-shadow: 0 10px 30px rgba(30, 50, 105, 0.08); transform: translateY(-2px); }
+.post-card__cat { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+.post-card__title { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.3; }
+.post-card__desc { font-size: 0.95rem; color: var(--white-60); line-height: 1.6; }
+.post-card__meta { font-size: 0.78rem; color: var(--white-60); }
+.post-list--compact .post-card a { padding: 1.25rem 1.5rem; }
+.post-list--compact .post-card__title { font-size: 1.1rem; }
+.blog-list__note { margin-top: 2.5rem; font-size: 0.9rem; color: var(--white-60); }
+
+@media (max-width: 768px) {
+  .post__header { padding: 7rem 0 2.5rem; }
+  .post__cta { padding: 1.75rem; }
+}

@@ -126,3 +126,11 @@
 .nav__mobile a:hover {
   color: var(--gold);
 }
+
+/* Logo recortado: versión blanca sobre el hero, a color al hacer scroll */
+.nav__logo { display: inline-flex; align-items: center; }
+.nav__logo img { height: 40px; width: auto; }
+.nav__logo-img--color { display: none; }
+.nav.scrolled .nav__logo-img--light { display: none; }
+.nav.scrolled .nav__logo-img--color { display: block; }
+@media (max-width: 768px) { .nav__logo img { height: 34px; } }

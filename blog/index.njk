@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Blog para propietarios que rentan en Mérida
+seoTitle: Blog para propietarios que rentan en Mérida
+description: Guías prácticas para propietarios e inversionistas con casas, departamentos o edificios en renta de largo plazo en Mérida, Yucatán.
+permalink: /blog/
+eleventyExcludeFromCollections: true
+---
+      <section class="post__header">
+        <div class="container post__container">
+          <div class="tag">Blog</div>
+          <h1 class="post__title">Guías para propietarios que rentan en Mérida</h1>
+          <p class="post__lead">
+            Cobranza, mantenimiento, costos y decisiones para quien ya tiene una
+            casa, departamento o edificio en renta de largo plazo.
+          </p>
+        </div>
+      </section>
+
+      <section class="container post__container blog-list">
+        {%- if collections.posts.length %}
+        <ul class="post-list">
+          {%- for p in collections.posts %}
+          <li class="post-card">
+            <a href="{{ p.url }}">
+              <span class="post-card__cat">{{ p.data.categoria or "Guía para propietarios" }}</span>
+              <span class="post-card__title">{{ p.data.title }}</span>
+              <span class="post-card__desc">{{ p.data.description }}</span>
+              <span class="post-card__meta">{{ p.date | fechaLarga }}</span>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- else %}
+        <p>Muy pronto publicaremos nuestras primeras guías.</p>
+        {%- endif %}
+        <p class="blog-list__note">
+          ¿Buscas casa o departamento para rentar o comprar? Rendara no renta ni
+          vende inmuebles; consulta a nuestras
+          <a href="/#contacto" class="link-gold">inmobiliarias aliadas</a>.
+        </p>
+      </section>
