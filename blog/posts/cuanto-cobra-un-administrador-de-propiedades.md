@@ -10,7 +10,7 @@ translationKey: management-fees
 
 Es la primera pregunta que nos hacen los propietarios, y tiene sentido: antes de delegar tu propiedad quieres saber cuánto te va a costar y qué recibes a cambio.
 
-> **En corto:** en Rendara la comisión es del **10% al 12% de la renta mensual efectivamente cobrada**. Si un mes el inquilino no paga, **no cobramos comisión**.
+> **En corto:** en Rendara la comisión de administración es del **15% de la renta mensual efectivamente cobrada**. Si el inquilino no paga, **nosotros no cobramos administración**.
 
 ## Cómo suelen cobrar los administradores
 
@@ -34,14 +34,12 @@ En Rendara cobramos **solo sobre la renta efectivamente cobrada**. Así nuestro 
 
 Así se vería la comisión mensual según la renta de tu propiedad:
 
-| Renta mensual | Comisión con 10% | Comisión con 12% |
-|---|---|---|
-| $15,000 | $1,500 | $1,800 |
-| $25,000 | $2,500 | $3,000 |
-| $40,000 | $4,000 | $4,800 |
-| Mes en que el inquilino no paga | $0 | $0 |
-
-El porcentaje exacto dentro del rango se confirma en la evaluación de tu propiedad.
+| Renta mensual | Comisión de administración (15%) |
+|---|---|
+| $15,000 | $2,250 |
+| $25,000 | $3,750 |
+| $40,000 | $6,000 |
+| Mes en que el inquilino no paga | $0 |
 
 ## Qué incluye la comisión en Rendara
 

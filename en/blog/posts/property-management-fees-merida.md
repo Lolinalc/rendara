@@ -10,7 +10,7 @@ translationKey: management-fees
 
 It is the first question owners ask us, and it makes sense: before handing over your property, you want to know what it will cost and what you get in return.
 
-> **In short:** at Rendara the fee is **10% to 12% of the monthly rent actually collected**. If the tenant doesn't pay in a given month, **we charge no fee**.
+> **In short:** at Rendara the management fee is **15% of the monthly rent actually collected**. If the tenant doesn't pay, **we don't charge a management fee**.
 
 ## How property managers usually charge
 
@@ -34,14 +34,12 @@ At Rendara we charge **only on rent actually collected**. That way our incentive
 
 This is what the monthly fee would look like depending on your property's rent (amounts in Mexican pesos):
 
-| Monthly rent | Fee at 10% | Fee at 12% |
-|---|---|---|
-| $15,000 MXN | $1,500 MXN | $1,800 MXN |
-| $25,000 MXN | $2,500 MXN | $3,000 MXN |
-| $40,000 MXN | $4,000 MXN | $4,800 MXN |
-| Month the tenant doesn't pay | $0 | $0 |
-
-The exact percentage within the range is confirmed when we evaluate your property.
+| Monthly rent | Management fee (15%) |
+|---|---|
+| $15,000 MXN | $2,250 MXN |
+| $25,000 MXN | $3,750 MXN |
+| $40,000 MXN | $6,000 MXN |
+| Month the tenant doesn't pay | $0 |
 
 ## What Rendara's fee includes
 
