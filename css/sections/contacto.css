@@ -93,3 +93,4 @@
 .lead-form__actions .btn-primary[disabled] { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
 .link-gold { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 700px) { .lead-form__grid { grid-template-columns: 1fr; } }
+.lead-form__field--full { grid-column: 1 / -1; }

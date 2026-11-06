@@ -237,3 +237,10 @@
 .nav:has(.nav__hamburger.open) .nav__logo-img--light { display: none; }
 .nav:has(.nav__hamburger.open) .nav__logo-img--color { display: block; }
 .nav:has(.nav__hamburger.open) .nav__hamburger span { background: var(--navy); }
+
+/* Tablets y laptops chicas: menú hamburguesa para que la barra no se desborde */
+@media (max-width: 1180px) {
+  .nav__links,
+  .nav__cta .btn-primary { display: none; }
+  .nav__hamburger { display: flex; }
+}

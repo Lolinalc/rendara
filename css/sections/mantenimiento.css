@@ -1,0 +1,47 @@
+/* ══ Gestión de mantenimiento ══ */
+.mantenimiento { padding: 8rem 0; background: #ffffff; }
+.mantenimiento__header { max-width: 640px; margin-bottom: 3.5rem; }
+.mantenimiento__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.mantenimiento__subtitle {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+.mantenimiento__steps { counter-reset: paso; display: flex; flex-direction: column; }
+.mantenimiento__steps li {
+  counter-increment: paso;
+  position: relative;
+  padding: 1.1rem 0 1.1rem 3.25rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--white-60);
+}
+.mantenimiento__steps li:first-child { border-top: 1px solid var(--border); }
+.mantenimiento__steps li::before {
+  content: counter(paso, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.mantenimiento__steps strong { color: var(--navy); }
+.mantenimiento__trades { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 2rem; }
+.mantenimiento .beneficios__cta-box { position: sticky; top: 100px; }
+.mantenimiento .beneficios__cta-box .section-title { font-size: 1.75rem; }
+.text-white { color: #ffffff; }
+@media (max-width: 1024px) {
+  .mantenimiento__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .mantenimiento .beneficios__cta-box { position: static; }
+}
+@media (max-width: 768px) { .mantenimiento { padding: 5rem 0; } }
+.mantenimiento__steps { list-style: none; padding: 0; }

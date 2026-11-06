@@ -15,7 +15,8 @@
       "faq": "FAQ",
       "blog": "Blog",
       "contacto": "Contacto",
-      "faqLong": "Preguntas frecuentes"
+      "faqLong": "Preguntas frecuentes",
+      "mantenimiento": "Mantenimiento"
     },
     "cta": "Evaluar mi propiedad",
     "navAria": "Navegación principal",
@@ -54,7 +55,8 @@
       "beneficios": "Benefits",
       "faq": "FAQ",
       "blog": "Blog",
-      "contacto": "Contact"
+      "contacto": "Contact",
+      "mantenimiento": "Maintenance"
     },
     "cta": "Evaluate my property",
     "navAria": "Main navigation",

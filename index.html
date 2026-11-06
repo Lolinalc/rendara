@@ -10,7 +10,7 @@
     <title>Administrador de Rentas para Propietarios en Mérida | Rendara</title>
     <meta
       name="description"
-      content="¿Tu casa o depa ya está rentado en Mérida? Cobramos la renta, atendemos al inquilino y te reportamos cada mes. Si el inquilino no paga, no cobramos administración."
+      content="¿Tu casa o depa ya está rentado en Mérida? Cobramos la renta, atendemos al inquilino y te reportamos cada mes. Si no hay ingreso, no hay comisión."
     />
     <meta
       name="keywords"
@@ -86,7 +86,7 @@
               "addressCountry": "MX"
             },
             "areaServed": { "@type": "City", "name": "Mérida" },
-            "serviceType": "Administración de propiedades en renta",
+            "serviceType": ["Administración de propiedades en renta", "Gestión de mantenimiento de inmuebles"],
             "priceRange": "15% de la renta mensual cobrada"
           },
           {
@@ -105,7 +105,7 @@
                 "name": "¿Cuál es el costo del servicio de administración de propiedades?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Nuestra comisión de administración es del 15% de la renta mensual, calculada únicamente sobre la renta efectivamente recibida. Si el inquilino no paga, no cobramos administración."
+                  "text": "Nuestra comisión de administración es del 15% de la renta mensual, calculada únicamente sobre la renta efectivamente recibida. Si no hay ingreso, no hay comisión. Si se requiere factura, se agrega IVA."
                 }
               },
               {
@@ -114,6 +114,14 @@
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Nos enfocamos 100% en la administración. Nos aliamos con inmobiliarias de confianza para la comercialización y selección de inquilinos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué es la gestión de mantenimiento de Rendara?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Es un servicio para casas desocupadas, sin inquilinos ni nadie viviendo en ellas. Evaluamos la propiedad, cotizamos los trabajos con un anticipo de $1,000 MXN que se descuenta del total si se aprueban los trabajos y, con aprobación del propietario, coordinamos y supervisamos pintura, plomería, electricidad, tablaroca, albañilería y carpintería. La comisión es del 20% sobre lo trabajado: 50% de anticipo y 50% al final, más IVA si se requiere factura."
                 }
               },
               {
@@ -165,6 +173,7 @@
         </a>
         <ul class="nav__links" role="list">
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#mantenimiento">Mantenimiento</a></li>
           <li><a href="#proceso">Proceso</a></li>
           <li><a href="#beneficios">Beneficios</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -195,6 +204,7 @@
     >
       <ul class="nav__mobile-list" role="list">
         <li><a href="#servicios" class="mobile-link">Servicios</a></li>
+        <li><a href="#mantenimiento" class="mobile-link">Mantenimiento</a></li>
         <li><a href="#proceso" class="mobile-link">Proceso</a></li>
         <li><a href="#beneficios" class="mobile-link">Beneficios</a></li>
         <li><a href="#faq" class="mobile-link">Preguntas frecuentes</a></li>
@@ -263,7 +273,7 @@
             </div>
             <div class="stat-item fade-up delay-1">
               <div class="stat-number">$0</div>
-              <div class="stat-label">De administración si el inquilino no paga</div>
+              <div class="stat-label">Si no hay ingreso, no hay comisión</div>
             </div>
             <div class="stat-item fade-up delay-2">
               <div class="stat-number">$15k+</div>
@@ -513,7 +523,7 @@
                   <span class="beneficio-item__num">01</span>
                   <div>
                     <h3 class="beneficio-item__title">
-                      Si el inquilino no paga, no cobramos
+                      Solo ganamos cuando tú ganas
                     </h3>
                     <p class="beneficio-item__text">
                       Nuestra comisión se calcula únicamente sobre renta
@@ -570,10 +580,89 @@
               </p>
               <p class="text-fine">
                 Propiedades con renta desde $15,000 MXN/mes · Edificios y
-                conjuntos sin mínimo
+                conjuntos sin mínimo · Más IVA si se requiere factura
               </p>
               <a href="#contacto" class="btn-primary mt-1-5">
                 Evaluar mi propiedad <span class="arrow-icon">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MANTENIMIENTO -->
+      <section
+        id="mantenimiento"
+        class="mantenimiento"
+        aria-labelledby="mantenimiento-title"
+      >
+        <div class="container">
+          <div class="mantenimiento__header fade-up">
+            <div class="tag">Gestión de mantenimiento</div>
+            <h2 id="mantenimiento-title" class="section-title">
+              ¿Tu casa está desocupada? La ponemos a punto.
+            </h2>
+            <p class="section-subtitle mt-1">
+              Para propiedades desocupadas: sin inquilinos ni nadie viviendo en
+              ellas. Evaluamos la casa, cotizamos los trabajos y supervisamos todo hasta entregarla
+              lista, con tu presupuesto y bajo un cronograma.
+            </p>
+          </div>
+
+          <div class="mantenimiento__inner">
+            <div class="fade-up">
+              <h3 class="mantenimiento__subtitle">Cómo funciona</h3>
+              <ol class="mantenimiento__steps">
+                <li>
+                  <strong>Evaluación de la casa.</strong> Tú nos dices qué
+                  quieres modificar o mejorar, o te sugerimos qué conviene
+                  hacer con base en nuestra experiencia supervisando varias
+                  propiedades.
+                </li>
+                <li>
+                  <strong>Cotización.</strong> Armamos la cotización de los
+                  trabajos con un anticipo de <strong>$1,000 MXN</strong>, que se
+                  descuenta del total si apruebas los trabajos.
+                </li>
+                <li>
+                  <strong>Tú decides.</strong> Apruebas qué trabajos sí se
+                  realizan.
+                </li>
+                <li>
+                  <strong>Contrato y cronograma.</strong> Firmamos el contrato
+                  de gestión de mantenimiento con un cronograma que incluye el
+                  presupuesto y las fechas en que se requiere cada aportación.
+                </li>
+                <li>
+                  <strong>Ejecución supervisada.</strong> Los trabajos se
+                  realizan con tu presupuesto y nosotros coordinamos y
+                  supervisamos a los proveedores.
+                </li>
+              </ol>
+              <div class="mantenimiento__trades" aria-label="Trabajos que coordinamos">
+                <span class="feature-chip">Pintura</span>
+                <span class="feature-chip">Plomería</span>
+                <span class="feature-chip">Electricidad</span>
+                <span class="feature-chip">Tablaroca</span>
+                <span class="feature-chip">Albañilería</span>
+                <span class="feature-chip">Carpintería</span>
+              </div>
+            </div>
+
+            <div class="beneficios__cta-box fade-up delay-2">
+              <div class="tag">Comisión</div>
+              <div class="comision-pill">20%</div>
+              <h3 class="section-title">Sobre todo lo que se trabaje.</h3>
+              <p>
+                Cobramos el 20% de comisión sobre el total de los trabajos
+                realizados: <strong class="text-white">50% de anticipo y 50% al final</strong>.
+              </p>
+              <p class="text-fine">
+                Cotización con anticipo de $1,000 MXN (se descuenta del total al aprobar) · Más IVA si se requiere factura · Los trabajos se pagan
+                con el presupuesto del propietario según el cronograma
+              </p>
+              <a href="#contacto" class="btn-primary mt-1-5" data-servicio="mantenimiento">
+                Cotizar mantenimiento <span class="arrow-icon">↗</span>
               </a>
             </div>
           </div>
@@ -631,7 +720,7 @@
                         >únicamente sobre la renta efectivamente
                         recibida</strong
                       >. Si el inquilino no paga algún mes, no generamos ninguna
-                      comisión.
+                      comisión. Si requieres factura, se agrega IVA.
                     </p>
                   </div>
                 </div>
@@ -666,6 +755,26 @@
                       <strong>renta mensual desde $15,000 MXN</strong>, y
                       <strong>edificios o conjuntos de departamentos</strong>
                       sin importar el monto.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__btn" aria-expanded="false">
+                  <span>¿Qué es la gestión de mantenimiento?</span>
+                  <span class="faq-item__icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-item__answer">
+                  <div class="faq-item__answer-inner">
+                    <p>
+                      Es un servicio para casas <strong>desocupadas</strong>, sin
+                      inquilinos ni nadie viviendo en ellas. Evaluamos la propiedad, cotizamos los
+                      trabajos (anticipo de $1,000 MXN por la cotización, que se descuenta del total si los apruebas) y, con
+                      tu aprobación, coordinamos y supervisamos pintura,
+                      plomería, electricidad, tablaroca, albañilería, carpintería
+                      y más. Cobramos el <strong>20% de comisión</strong> sobre
+                      lo que se trabaje: 50% de anticipo y 50% al final, más IVA si se requiere factura.
                     </p>
                   </div>
                 </div>
@@ -762,6 +871,14 @@
               </div>
 
               <div class="lead-form__grid" id="owner-fields">
+                <fieldset class="lead-form__field lead-form__field--full">
+                  <legend>Me interesa…</legend>
+                  <div class="chips">
+                    <label><input type="radio" name="servicio" value="admin" required /> <span>Administración de renta</span></label>
+                    <label><input type="radio" name="servicio" value="mant" /> <span>Gestión de mantenimiento</span></label>
+                    <label><input type="radio" name="servicio" value="ambos" /> <span>Ambos</span></label>
+                  </div>
+                </fieldset>
                 <label class="lead-form__field">
                   <span>Tipo de inmueble</span>
                   <select name="tipo" required>
@@ -776,15 +893,16 @@
                   <span>¿Está rentado actualmente?</span>
                   <select name="rentado" required>
                     <option value="">Selecciona…</option>
-                    <option>Sí</option>
+                    <option value="si">Sí</option>
                     <option>No, pero quiero rentarlo</option>
                     <option>No</option>
                   </select>
                 </label>
                 <label class="lead-form__field">
-                  <span>Renta mensual aproximada</span>
+                  <span>Renta mensual aproximada o esperada</span>
                   <select name="renta" required>
                     <option value="">Selecciona…</option>
+                    <option value="nose">Aún no lo sé</option>
                     <option value="menos15">Menos de $15,000</option>
                     <option>$15,000 – $25,000</option>
                     <option>$25,000 – $40,000</option>
@@ -808,6 +926,12 @@
                   <span>Tu nombre</span>
                   <input type="text" name="nombre" placeholder="Nombre" required />
                 </label>
+              </div>
+
+              <div class="lead-form__alert" id="alert-ocupada" hidden>
+                La <strong>gestión de mantenimiento</strong> es solo para casas
+                desocupadas, sin nadie viviendo en ellas. Si tu propiedad está
+                rentada, te podemos ayudar con la administración.
               </div>
 
               <div class="lead-form__alert" id="alert-minimo" hidden>
@@ -850,6 +974,7 @@
           </a>
           <nav class="footer__nav" aria-label="Navegación del pie de página">
             <a href="#servicios">Servicios</a>
+            <a href="#mantenimiento">Mantenimiento</a>
             <a href="#proceso">Proceso</a>
             <a href="#beneficios">Beneficios</a>
             <a href="#faq">FAQ</a>
