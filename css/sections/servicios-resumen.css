@@ -1,0 +1,71 @@
+/* ══ Resumen de los dos servicios ══ */
+.servicios-resumen { padding: 7rem 0 6rem; background: var(--navy-mid); }
+.servicios-resumen__header { max-width: 640px; margin-bottom: 3rem; }
+.servicios-resumen__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.servicio-opcion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(30, 50, 105, 0.06);
+}
+.servicio-opcion--alt { border-top-color: var(--navy); }
+.servicio-opcion__when {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.servicio-opcion--alt .servicio-opcion__when { color: var(--navy); }
+.servicio-opcion__title { font-family: var(--font-serif); font-size: 1.75rem; line-height: 1.2; color: var(--navy); }
+.servicio-opcion__text { color: var(--white-60); line-height: 1.7; }
+.servicio-opcion__list { display: flex; flex-direction: column; gap: 0.5rem; }
+.servicio-opcion__list li { position: relative; padding-left: 1.5rem; font-size: 0.92rem; color: var(--white-60); }
+.servicio-opcion__list li::before {
+  content: "✓";
+  position: absolute; left: 0; top: 0.05rem;
+  font-size: 0.75rem; font-weight: 700; color: var(--gold);
+}
+.servicio-opcion__price {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--white-60);
+}
+.servicio-opcion__price strong { font-family: var(--font-serif); font-size: 1.5rem; color: var(--navy); margin-right: 0.25rem; }
+.servicio-opcion .btn-primary,
+.servicio-opcion .btn-outline { align-self: flex-start; }
+
+.servicios-resumen__camino {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--white-60);
+}
+.servicios-resumen__camino li { display: flex; align-items: center; gap: 0.6rem; }
+.servicios-resumen__camino .camino__num {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--navy); color: #fff; font-size: 0.75rem; font-weight: 600;
+}
+.servicios-resumen__camino strong { color: var(--navy); }
+
+@media (max-width: 900px) {
+  .servicios-resumen__grid, .servicios-resumen__camino { grid-template-columns: 1fr; }
+  .servicio-opcion { padding: 2rem 1.5rem; }
+}
+@media (max-width: 768px) { .servicios-resumen { padding: 5rem 0 4rem; } }
+.servicios-resumen__camino .camino__txt { line-height: 1.5; }

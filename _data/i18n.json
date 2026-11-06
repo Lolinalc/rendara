@@ -16,7 +16,10 @@
       "blog": "Blog",
       "contacto": "Contacto",
       "faqLong": "Preguntas frecuentes",
-      "mantenimiento": "Mantenimiento"
+      "mantenimiento": "Mantenimiento",
+      "administracion": "Administración",
+      "administracionLong": "Administración de propiedades",
+      "mantenimientoLong": "Gestión de mantenimiento"
     },
     "cta": "Evaluar mi propiedad",
     "navAria": "Navegación principal",
@@ -56,7 +59,10 @@
       "faq": "FAQ",
       "blog": "Blog",
       "contacto": "Contact",
-      "mantenimiento": "Maintenance"
+      "mantenimiento": "Maintenance",
+      "administracion": "Management",
+      "administracionLong": "Property management",
+      "mantenimientoLong": "Maintenance management"
     },
     "cta": "Evaluate my property",
     "navAria": "Main navigation",

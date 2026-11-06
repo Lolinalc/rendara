@@ -173,9 +173,9 @@
         </a>
         <ul class="nav__links" role="list">
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#administracion">Administración</a></li>
           <li><a href="#mantenimiento">Mantenimiento</a></li>
           <li><a href="#proceso">Proceso</a></li>
-          <li><a href="#beneficios">Beneficios</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/en/" class="nav__lang" hreflang="en" lang="en" aria-label="English version">EN</a></li>
@@ -204,9 +204,9 @@
     >
       <ul class="nav__mobile-list" role="list">
         <li><a href="#servicios" class="mobile-link">Servicios</a></li>
-        <li><a href="#mantenimiento" class="mobile-link">Mantenimiento</a></li>
+        <li><a href="#administracion" class="mobile-link">Administración de propiedades</a></li>
+        <li><a href="#mantenimiento" class="mobile-link">Gestión de mantenimiento</a></li>
         <li><a href="#proceso" class="mobile-link">Proceso</a></li>
-        <li><a href="#beneficios" class="mobile-link">Beneficios</a></li>
         <li><a href="#faq" class="mobile-link">Preguntas frecuentes</a></li>
         <li><a href="/blog/" class="mobile-link">Blog</a></li>
       </ul>
@@ -245,9 +245,9 @@
             <em>para propietarios en Mérida.</em>
           </h1>
           <p class="hero__desc">
-            Para propietarios e inversionistas con casas, departamentos o
-            edificios en renta de largo plazo. Cobranza, mantenimiento,
-            inquilinos y reportes mensuales: nosotros lo manejamos todo.
+            Administramos tu casa, departamento o edificio rentado de punta a
+            punta. Y si tu casa está desocupada, la ponemos a punto con
+            nuestra gestión de mantenimiento.
           </p>
           <div class="hero__actions">
             <a href="#contacto" class="btn-primary">
@@ -284,6 +284,68 @@
               <div class="stat-label">Atención a imprevistos</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS (resumen de los dos servicios) -->
+      <section id="servicios" class="servicios-resumen" aria-labelledby="resumen-title">
+        <div class="container">
+          <div class="servicios-resumen__header fade-up">
+            <div class="tag">Servicios</div>
+            <h2 id="resumen-title" class="section-title">
+              Dos servicios, según el momento de tu propiedad.
+            </h2>
+            <p class="section-subtitle mt-1">
+              Administramos tu propiedad cuando ya está rentada. Y si todavía
+              está desocupada, te ayudamos a ponerla a punto antes de rentarla.
+            </p>
+          </div>
+
+          <div class="servicios-resumen__grid">
+            <article class="servicio-opcion fade-up">
+              <p class="servicio-opcion__when">Tu propiedad está rentada</p>
+              <h3 class="servicio-opcion__title">Administración de propiedades</h3>
+              <p class="servicio-opcion__text">
+                Nos encargamos de todo, mes a mes, mientras tu inmueble está
+                rentado. Tú solo cobras.
+              </p>
+              <ul class="servicio-opcion__list">
+                <li>Cobranza de la renta y reportes mensuales</li>
+                <li>Atención al inquilino y reparaciones del día a día</li>
+                <li>Contratos, trámites y supervisión del inmueble</li>
+              </ul>
+              <p class="servicio-opcion__price">
+                <strong>15%</strong> de la renta cobrada · Si no hay ingreso, no
+                hay comisión
+              </p>
+              <a href="#administracion" class="btn-primary">Ver qué incluye <span class="arrow-icon">↗</span></a>
+            </article>
+
+            <article class="servicio-opcion servicio-opcion--alt fade-up delay-1">
+              <p class="servicio-opcion__when">Tu casa está desocupada</p>
+              <h3 class="servicio-opcion__title">Gestión de mantenimiento</h3>
+              <p class="servicio-opcion__text">
+                El paso antes de rentar: evaluamos la casa, cotizamos los trabajos
+                y los supervisamos hasta dejarla lista.
+              </p>
+              <ul class="servicio-opcion__list">
+                <li>Evaluación de la casa y cotización</li>
+                <li>Pintura, plomería, electricidad, albañilería y más</li>
+                <li>Contrato, cronograma y supervisión de obra</li>
+              </ul>
+              <p class="servicio-opcion__price">
+                <strong>20%</strong> sobre lo trabajado · Cotización de $1,000 MXN
+                que se descuenta del total
+              </p>
+              <a href="#mantenimiento" class="btn-outline">Ver cómo funciona <span class="arrow-icon">↗</span></a>
+            </article>
+          </div>
+
+          <ol class="servicios-resumen__camino fade-up delay-2" aria-label="Cómo se conectan los servicios">
+            <li><span class="camino__num">1</span><span class="camino__txt"><strong>Gestión de mantenimiento</strong> · ponemos tu casa a punto</span></li>
+            <li><span class="camino__num">2</span><span class="camino__txt"><strong>Inmobiliaria aliada</strong> · encuentra al inquilino</span></li>
+            <li><span class="camino__num">3</span><span class="camino__txt"><strong>Administración Rendara</strong> · tú solo cobras</span></li>
+          </ol>
         </div>
       </section>
 
@@ -335,16 +397,16 @@
 
       <!-- SERVICIOS -->
       <section
-        id="servicios"
+        id="administracion"
         class="servicios"
         aria-labelledby="servicios-title"
       >
         <div class="container">
           <div class="servicios__header">
             <div class="fade-up">
-              <div class="tag">Servicios</div>
+              <div class="tag">Servicio 1 · Administración de propiedades</div>
               <h2 id="servicios-title" class="section-title">
-                Todo lo que tu propiedad necesita, en un solo lugar.
+                Todo lo que incluye la administración de tu propiedad rentada.
               </h2>
             </div>
             <p class="section-subtitle fade-up delay-1">
@@ -598,7 +660,7 @@
       >
         <div class="container">
           <div class="mantenimiento__header fade-up">
-            <div class="tag">Gestión de mantenimiento</div>
+            <div class="tag">Servicio 2 · Gestión de mantenimiento</div>
             <h2 id="mantenimiento-title" class="section-title">
               ¿Tu casa está desocupada? La ponemos a punto.
             </h2>
@@ -974,9 +1036,9 @@
           </a>
           <nav class="footer__nav" aria-label="Navegación del pie de página">
             <a href="#servicios">Servicios</a>
+            <a href="#administracion">Administración</a>
             <a href="#mantenimiento">Mantenimiento</a>
             <a href="#proceso">Proceso</a>
-            <a href="#beneficios">Beneficios</a>
             <a href="#faq">FAQ</a>
             <a href="/blog/">Blog</a>
             <a href="#contacto">Contacto</a>
