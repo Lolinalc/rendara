@@ -5,6 +5,7 @@ description: "Una inmobiliaria te ayuda a rentar tu propiedad; una administrador
 date: 2026-11-05
 categoria: Decisiones
 keyword: diferencia entre inmobiliaria y administradora de inmuebles
+translationKey: agency-vs-manager
 ---
 
 Si tienes una casa o un departamento en renta en Mérida, seguramente has escuchado ambos términos. Se usan como si fueran lo mismo, pero resuelven momentos distintos de la vida de tu propiedad.

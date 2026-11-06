@@ -4,6 +4,8 @@ title: Blog para propietarios que rentan en Mérida
 seoTitle: Blog para propietarios que rentan en Mérida
 description: Guías prácticas para propietarios e inversionistas con casas, departamentos o edificios en renta de largo plazo en Mérida, Yucatán.
 permalink: /blog/
+lang: es
+altUrl: /en/blog/
 eleventyExcludeFromCollections: true
 ---
       <section class="post__header">
@@ -26,7 +28,7 @@ eleventyExcludeFromCollections: true
               <span class="post-card__cat">{{ p.data.categoria or "Guía para propietarios" }}</span>
               <span class="post-card__title">{{ p.data.title }}</span>
               <span class="post-card__desc">{{ p.data.description }}</span>
-              <span class="post-card__meta">{{ p.date | fechaLarga }}</span>
+              <span class="post-card__meta">{{ p.date | fechaLarga("es-MX") }}</span>
             </a>
           </li>
           {%- endfor %}

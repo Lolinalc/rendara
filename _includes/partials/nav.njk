@@ -1,11 +1,14 @@
+{%- set t = i18n[lang or "es"] -%}
+{%- set other = i18n[t.otherLang] -%}
+{%- set altHref = altUrl or other.blog -%}
     <!-- NAV -->
-    <nav class="nav" role="navigation" aria-label="Navegación principal">
+    <nav class="nav" role="navigation" aria-label="{{ t.navAria }}">
       <div class="nav__inner">
-        <a href="/" class="nav__logo" aria-label="Rendara – Inicio">
+        <a href="{{ t.home }}" class="nav__logo" aria-label="{{ t.homeAria }}">
           <img
             class="nav__logo-img nav__logo-img--light"
             src="/images/RendaraHorizontalBlanco-recorte.png"
-            alt="Rendara – Administración de inmuebles para propietarios en Mérida"
+            alt="{{ t.logoAlt }}"
             width="136"
             height="40"
           />
@@ -19,20 +22,21 @@
           />
         </a>
         <ul class="nav__links" role="list">
-          <li><a href="/#servicios">Servicios</a></li>
-          <li><a href="/#proceso">Proceso</a></li>
-          <li><a href="/#beneficios">Beneficios</a></li>
-          <li><a href="/#faq">FAQ</a></li>
-          <li><a href="/blog/">Blog</a></li>
+          <li><a href="{{ t.home }}#servicios">{{ t.nav.servicios }}</a></li>
+          <li><a href="{{ t.home }}#proceso">{{ t.nav.proceso }}</a></li>
+          <li><a href="{{ t.home }}#beneficios">{{ t.nav.beneficios }}</a></li>
+          <li><a href="{{ t.home }}#faq">{{ t.nav.faq }}</a></li>
+          <li><a href="{{ t.blog }}">{{ t.nav.blog }}</a></li>
+          <li><a href="{{ altHref }}" class="nav__lang" hreflang="{{ t.otherLang }}" lang="{{ t.otherLang }}" aria-label="{{ t.otherAria }}">{{ t.otherLabel }}</a></li>
         </ul>
         <div class="nav__cta">
-          <a href="/#contacto" class="btn-primary"
-            >Evaluar mi propiedad <span class="arrow-icon">↗</span></a
+          <a href="{{ t.home }}#contacto" class="btn-primary"
+            >{{ t.cta }} <span class="arrow-icon">↗</span></a
           >
           <button
             class="nav__hamburger"
             id="hamburger"
-            aria-label="Abrir menú"
+            aria-label="{{ t.menuOpen }}"
             aria-expanded="false"
           >
             <span></span><span></span><span></span>
@@ -45,13 +49,13 @@
       class="nav__mobile"
       id="mobile-menu"
       role="dialog"
-      aria-label="Menú móvil"
+      aria-label="{{ t.menuMobile }}"
     >
-      <a href="/#servicios" class="mobile-link">Servicios</a>
-      <a href="/#proceso" class="mobile-link">Proceso</a>
-      <a href="/#beneficios" class="mobile-link">Beneficios</a>
-      <a href="/#faq" class="mobile-link">FAQ</a>
-      <a href="/blog/" class="mobile-link">Blog</a>
-      <a href="/#contacto" class="mobile-link">Contacto</a>
+      <a href="{{ t.home }}#servicios" class="mobile-link">{{ t.nav.servicios }}</a>
+      <a href="{{ t.home }}#proceso" class="mobile-link">{{ t.nav.proceso }}</a>
+      <a href="{{ t.home }}#beneficios" class="mobile-link">{{ t.nav.beneficios }}</a>
+      <a href="{{ t.home }}#faq" class="mobile-link">{{ t.nav.faq }}</a>
+      <a href="{{ t.blog }}" class="mobile-link">{{ t.nav.blog }}</a>
+      <a href="{{ t.home }}#contacto" class="mobile-link">{{ t.nav.contacto }}</a>
+      <a href="{{ altHref }}" class="mobile-link nav__lang" hreflang="{{ t.otherLang }}" lang="{{ t.otherLang }}">{{ t.otherLabelLong }}</a>
     </div>
-

@@ -11,7 +11,7 @@
             "description": {{ description | json | safe }},
             "datePublished": "{{ page.date | isoDate }}",
             "dateModified": "{{ (updated or page.date) | isoDate }}",
-            "inLanguage": "es-MX",
+            "inLanguage": "{{ i18n[lang].htmlLang }}",
             "mainEntityOfPage": "https://rendaramx.com{{ page.url }}",
             "image": "https://rendaramx.com/images/og-rendara.jpg",
             "author": { "@type": "Organization", "name": "Rendara", "url": "https://rendaramx.com/" },
@@ -24,8 +24,8 @@
           {
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rendaramx.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rendaramx.com/blog/" },
+              { "@type": "ListItem", "position": 1, "name": "{{ i18n[lang].breadcrumbHome }}", "item": "https://rendaramx.com{{ i18n[lang].home }}" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://rendaramx.com{{ i18n[lang].blog }}" },
               { "@type": "ListItem", "position": 3, "name": {{ title | json | safe }} }
             ]
           }
@@ -35,20 +35,22 @@
 {% endblock %}
 
 {% block content %}
+{%- set t = i18n[lang or "es"] %}
+{%- set posts = collections.posts if lang == "es" else collections.postsEn %}
       <article class="post">
         <header class="post__header">
           <div class="container post__container">
-            <nav class="post__breadcrumb" aria-label="Ruta">
-              <a href="/">Inicio</a> <span aria-hidden="true">/</span>
-              <a href="/blog/">Blog</a>
+            <nav class="post__breadcrumb" aria-label="{{ t.breadcrumbAria }}">
+              <a href="{{ t.home }}">{{ t.breadcrumbHome }}</a> <span aria-hidden="true">/</span>
+              <a href="{{ t.blog }}">Blog</a>
             </nav>
-            <div class="tag">{{ categoria or "Guía para propietarios" }}</div>
+            <div class="tag">{{ categoria or t.defaultCategory }}</div>
             <h1 class="post__title">{{ title }}</h1>
             <p class="post__lead">{{ description }}</p>
             <p class="post__meta">
-              Por el equipo de Rendara ·
-              <time datetime="{{ page.date | isoDate }}">{{ page.date | fechaLarga }}</time>
-              · {{ content | minutosLectura }} min de lectura
+              {{ t.by }} ·
+              <time datetime="{{ page.date | isoDate }}">{{ page.date | fechaLarga(t.dateLocale) }}</time>
+              · {{ content | minutosLectura }} {{ t.readTime }}
             </p>
           </div>
         </header>
@@ -58,24 +60,21 @@
 {{ content | safe }}
           </div>
 
-          <aside class="post__cta" aria-label="Evaluar mi propiedad">
-            <div class="tag">Para propietarios</div>
-            <h2 class="post__cta-title">¿Tu propiedad ya está rentada?</h2>
-            <p>
-              Administramos casas, departamentos y edificios en renta de largo plazo
-              en Mérida. Cobramos solo sobre la renta efectivamente cobrada.
-            </p>
-            <a href="/#contacto" class="btn-primary">
-              Evaluar mi propiedad <span class="arrow-icon">↗</span>
+          <aside class="post__cta" aria-label="{{ t.cta }}">
+            <div class="tag">{{ t.ctaTag }}</div>
+            <h2 class="post__cta-title">{{ t.ctaTitle }}</h2>
+            <p>{{ t.ctaText }}</p>
+            <a href="{{ t.home }}#contacto" class="btn-primary">
+              {{ t.cta }} <span class="arrow-icon">↗</span>
             </a>
-            <p class="text-fine">Rendara no renta ni vende inmuebles.</p>
+            <p class="text-fine">{{ t.ctaFine }}</p>
           </aside>
 
-          {%- if collections.posts.length > 1 %}
+          {%- if posts.length > 1 %}
           <section class="post__related" aria-labelledby="relacionados">
-            <h2 id="relacionados" class="post__related-title">Sigue leyendo</h2>
+            <h2 id="relacionados" class="post__related-title">{{ t.related }}</h2>
             <ul class="post-list post-list--compact">
-              {%- for p in collections.posts %}
+              {%- for p in posts %}
                 {%- if p.url != page.url and loop.index0 < 4 %}
               <li class="post-card">
                 <a href="{{ p.url }}">

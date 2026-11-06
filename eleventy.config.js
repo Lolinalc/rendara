@@ -7,6 +7,7 @@ export default function (eleventyConfig) {
   // Archivos estáticos que se publican sin cambios
   [
     "index.html",
+    "en/index.html",
     "css",
     "js",
     "images",
@@ -14,13 +15,21 @@ export default function (eleventyConfig) {
     "googlec78bcb04f43c121d.html",
   ].forEach((p) => eleventyConfig.addPassthroughCopy(p));
 
-  // Artículos publicados (los que tienen draft: true no se publican), más recientes primero
-  eleventyConfig.addCollection("posts", (api) =>
-    api
-      .getFilteredByGlob("blog/posts/*.md")
-      .filter((p) => !p.data.draft)
-      .sort((a, b) => b.date - a.date)
-  );
+  // Artículos publicados por idioma (los que tienen draft: true no se publican), más recientes primero
+  const publicados = (api, glob) =>
+    api.getFilteredByGlob(glob).filter((p) => !p.data.draft).sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("posts", (api) => publicados(api, "blog/posts/*.md"));
+  eleventyConfig.addCollection("postsEn", (api) => publicados(api, "en/blog/posts/*.md"));
+  eleventyConfig.addCollection("translatable", (api) => [
+    ...publicados(api, "blog/posts/*.md"),
+    ...publicados(api, "en/blog/posts/*.md"),
+  ]);
+
+  // URL de la traducción de un artículo (mismo translationKey, otro idioma)
+  eleventyConfig.addFilter("translationOf", (items, key, lang) => {
+    const t = (items || []).find((p) => p.data.translationKey === key && p.data.lang !== lang);
+    return t ? t.url : "";
+  });
 
   // No generar páginas para borradores
   eleventyConfig.addPreprocessor("drafts", "md", (data) => {
@@ -29,8 +38,8 @@ export default function (eleventyConfig) {
 
   // Fechas
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString().slice(0, 10));
-  eleventyConfig.addFilter("fechaLarga", (d) =>
-    new Date(d).toLocaleDateString("es-MX", {
+  eleventyConfig.addFilter("fechaLarga", (d, locale = "es-MX") =>
+    new Date(d).toLocaleDateString(locale, {
       day: "numeric",
       month: "long",
       year: "numeric",

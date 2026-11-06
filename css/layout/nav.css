@@ -134,3 +134,16 @@
 .nav.scrolled .nav__logo-img--light { display: none; }
 .nav.scrolled .nav__logo-img--color { display: block; }
 @media (max-width: 768px) { .nav__logo img { height: 34px; } }
+
+/* Selector de idioma */
+.nav__links .nav__lang {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  opacity: 0.85;
+}
+.nav__links .nav__lang::after { display: none; }
+.nav__links .nav__lang:hover { opacity: 1; color: var(--gold); }

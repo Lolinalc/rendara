@@ -5,6 +5,7 @@ description: "Cómo se calcula la comisión de un administrador de rentas, ejemp
 date: 2026-11-05
 categoria: Costos
 keyword: cuánto cobra un administrador de propiedades
+translationKey: management-fees
 ---
 
 Es la primera pregunta que nos hacen los propietarios, y tiene sentido: antes de delegar tu propiedad quieres saber cuánto te va a costar y qué recibes a cambio.

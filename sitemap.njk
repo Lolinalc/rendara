@@ -3,17 +3,26 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- set pares = [["/", "/en/"], ["/blog/", "/en/blog/"]] %}
+{%- for par in pares %}
+  {%- for u in par %}
   <url>
-    <loc>https://rendaramx.com/</loc>
+    <loc>https://rendaramx.com{{ u }}</loc>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://rendaramx.com{{ par[0] }}" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rendaramx.com{{ par[1] }}" />
   </url>
-  <url>
-    <loc>https://rendaramx.com/blog/</loc>
-  </url>
-{%- for post in collections.posts %}
+  {%- endfor %}
+{%- endfor %}
+{%- for post in collections.translatable %}
+  {%- set alt = collections.translatable | translationOf(post.data.translationKey, post.data.lang) %}
   <url>
     <loc>https://rendaramx.com{{ post.url }}</loc>
     <lastmod>{{ (post.data.updated or post.date) | isoDate }}</lastmod>
+    {%- if alt %}
+    <xhtml:link rel="alternate" hreflang="{{ i18n[post.data.lang].htmlLang }}" href="https://rendaramx.com{{ post.url }}" />
+    <xhtml:link rel="alternate" hreflang="{{ i18n[i18n[post.data.lang].otherLang].htmlLang }}" href="https://rendaramx.com{{ alt }}" />
+    {%- endif %}
   </url>
 {%- endfor %}
 </urlset>

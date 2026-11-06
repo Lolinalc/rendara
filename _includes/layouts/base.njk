@@ -1,5 +1,11 @@
+{%- set t = i18n[lang or "es"] -%}
+{%- set other = i18n[t.otherLang] -%}
+{#- URL de la versión en el otro idioma: la traducción del artículo, o la que indique la página -#}
+{%- if translationKey -%}
+  {%- set altUrl = collections.translatable | translationOf(translationKey, lang) -%}
+{%- endif -%}
 <!doctype html>
-<html lang="es-MX">
+<html lang="{{ t.htmlLang }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,13 +13,18 @@
     <meta name="description" content="{{ description }}" />
     <link rel="canonical" href="https://rendaramx.com{{ page.url }}" />
     <meta name="robots" content="index, follow" />
+{%- if altUrl %}
+    <link rel="alternate" hreflang="{{ t.htmlLang }}" href="https://rendaramx.com{{ page.url }}" />
+    <link rel="alternate" hreflang="{{ other.htmlLang }}" href="https://rendaramx.com{{ altUrl }}" />
+    <link rel="alternate" hreflang="x-default" href="https://rendaramx.com{{ page.url if lang == 'es' else altUrl }}" />
+{%- endif %}
 
     <meta property="og:type" content="{{ ogType or 'website' }}" />
     <meta property="og:url" content="https://rendaramx.com{{ page.url }}" />
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:image" content="https://rendaramx.com/images/og-rendara.jpg" />
-    <meta property="og:locale" content="es_MX" />
+    <meta property="og:locale" content="{{ t.ogLocale }}" />
     <meta property="og:site_name" content="Rendara" />
     <meta name="twitter:card" content="summary_large_image" />
 

@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: Blog for property owners renting in Mérida
+seoTitle: Guides for Rental Property Owners in Mérida
+description: Practical guides for owners and investors with houses, apartments or buildings on long-term leases in Mérida, Yucatán, Mexico.
+permalink: /en/blog/
+lang: en
+altUrl: /blog/
+eleventyExcludeFromCollections: true
+---
+      <section class="post__header">
+        <div class="container post__container">
+          <div class="tag">Blog</div>
+          <h1 class="post__title">Guides for owners renting out property in Mérida</h1>
+          <p class="post__lead">
+            Rent collection, maintenance, costs and decisions for anyone who already
+            owns a house, apartment or building on a long-term lease.
+          </p>
+        </div>
+      </section>
+
+      <section class="container post__container blog-list">
+        {%- if collections.postsEn.length %}
+        <ul class="post-list">
+          {%- for p in collections.postsEn %}
+          <li class="post-card">
+            <a href="{{ p.url }}">
+              <span class="post-card__cat">{{ p.data.categoria or "Owner's guide" }}</span>
+              <span class="post-card__title">{{ p.data.title }}</span>
+              <span class="post-card__desc">{{ p.data.description }}</span>
+              <span class="post-card__meta">{{ p.date | fechaLarga("en-US") }}</span>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- else %}
+        <p>Our first guides are coming soon.</p>
+        {%- endif %}
+        <p class="blog-list__note">
+          Looking for a house or apartment to rent or buy? Rendara does not rent out
+          or sell properties; please contact our
+          <a href="/en/#contacto" class="link-gold">partner real estate agencies</a>.
+        </p>
+      </section>
