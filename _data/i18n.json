@@ -8,7 +8,15 @@
     "otherLabel": "EN",
     "otherLabelLong": "English",
     "otherAria": "English version",
-    "nav": { "servicios": "Servicios", "proceso": "Proceso", "beneficios": "Beneficios", "faq": "FAQ", "blog": "Blog", "contacto": "Contacto" },
+    "nav": {
+      "servicios": "Servicios",
+      "proceso": "Proceso",
+      "beneficios": "Beneficios",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "contacto": "Contacto",
+      "faqLong": "Preguntas frecuentes"
+    },
     "cta": "Evaluar mi propiedad",
     "navAria": "Navegación principal",
     "footerAria": "Navegación del pie de página",
@@ -28,7 +36,8 @@
     "ctaText": "Administramos casas, departamentos y edificios en renta de largo plazo en Mérida. Cobramos solo sobre la renta efectivamente cobrada.",
     "ctaFine": "Rendara no renta ni vende inmuebles.",
     "related": "Sigue leyendo",
-    "dateLocale": "es-MX"
+    "dateLocale": "es-MX",
+    "langLabel": "Idioma"
   },
   "en": {
     "htmlLang": "en",
@@ -39,7 +48,14 @@
     "otherLabel": "ES",
     "otherLabelLong": "Español",
     "otherAria": "Versión en español",
-    "nav": { "servicios": "Services", "proceso": "Process", "beneficios": "Benefits", "faq": "FAQ", "blog": "Blog", "contacto": "Contact" },
+    "nav": {
+      "servicios": "Services",
+      "proceso": "Process",
+      "beneficios": "Benefits",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "contacto": "Contact"
+    },
     "cta": "Evaluate my property",
     "navAria": "Main navigation",
     "footerAria": "Footer navigation",
@@ -59,6 +75,7 @@
     "ctaText": "We manage houses, apartments and buildings on long-term leases in Mérida. We only charge on rent actually collected.",
     "ctaFine": "Rendara does not rent out or sell properties.",
     "related": "Keep reading",
-    "dateLocale": "en-US"
+    "dateLocale": "en-US",
+    "langLabel": "Language"
   }
 }

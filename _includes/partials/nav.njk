@@ -51,11 +51,26 @@
       role="dialog"
       aria-label="{{ t.menuMobile }}"
     >
-      <a href="{{ t.home }}#servicios" class="mobile-link">{{ t.nav.servicios }}</a>
-      <a href="{{ t.home }}#proceso" class="mobile-link">{{ t.nav.proceso }}</a>
-      <a href="{{ t.home }}#beneficios" class="mobile-link">{{ t.nav.beneficios }}</a>
-      <a href="{{ t.home }}#faq" class="mobile-link">{{ t.nav.faq }}</a>
-      <a href="{{ t.blog }}" class="mobile-link">{{ t.nav.blog }}</a>
-      <a href="{{ t.home }}#contacto" class="mobile-link">{{ t.nav.contacto }}</a>
-      <a href="{{ altHref }}" class="mobile-link nav__lang" hreflang="{{ t.otherLang }}" lang="{{ t.otherLang }}">{{ t.otherLabelLong }}</a>
+      <ul class="nav__mobile-list" role="list">
+        <li><a href="{{ t.home }}#servicios" class="mobile-link">{{ t.nav.servicios }}</a></li>
+        <li><a href="{{ t.home }}#proceso" class="mobile-link">{{ t.nav.proceso }}</a></li>
+        <li><a href="{{ t.home }}#beneficios" class="mobile-link">{{ t.nav.beneficios }}</a></li>
+        <li><a href="{{ t.home }}#faq" class="mobile-link">{{ t.nav.faqLong or t.nav.faq }}</a></li>
+        <li><a href="{{ t.blog }}" class="mobile-link">{{ t.nav.blog }}</a></li>
+      </ul>
+      <div class="nav__mobile-footer">
+        <a href="{{ t.home }}#contacto" class="btn-primary nav__mobile-cta mobile-link">{{ t.cta }} <span class="arrow-icon">↗</span></a>
+        <div class="nav__mobile-meta">
+          <a href="https://wa.me/529992393493" class="nav__mobile-contact" target="_blank" rel="noopener noreferrer">{{ t.nav.contacto }}: +52 999 239 3493</a>
+          <div class="lang-switch" role="group" aria-label="{{ t.langLabel }}">
+          {%- if lang == "en" %}
+            <a href="{{ altHref }}" class="lang-switch__item" hreflang="es" lang="es" aria-label="{{ t.otherAria }}">ES</a>
+            <span class="lang-switch__item is-active" aria-current="true">EN</span>
+          {%- else %}
+            <span class="lang-switch__item is-active" aria-current="true">ES</span>
+            <a href="{{ altHref }}" class="lang-switch__item" hreflang="en" lang="en" aria-label="{{ t.otherAria }}">EN</a>
+          {%- endif %}
+          </div>
+        </div>
+      </div>
     </div>
